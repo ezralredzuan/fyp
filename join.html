@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="joinstyle.css">
+    <title>Taekwonweb Registration </title> 
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Registration Form</h1>
+        </div>
+        <form action="process.php" method="post">
+            <div class="user-details"> 
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="varchar" placeholder="Enter Your Full Name" name="Full_Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="varchar" placeholder="Enter Your Email Address" name="Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Contact Number</span>
+                    <input type="bigint" placeholder="Enter Your Contact Number" name="Contact_Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Experiences</span>
+                    <input type="varchar" placeholder="Enter Your Experiences" name="Experiences" required>
+                </div> 
+                <div class="input-box">
+                    <span class="details">Highest Achievement</span> 
+                    <input type="varchar" placeholder="Enter Your Highest Achievement" name="Highest_Achievement" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Belt Colour</span> 
+                    <input type="varchar" placeholder="Enter Your Belt Colour" name="Belt_Colour" required>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Register ">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
