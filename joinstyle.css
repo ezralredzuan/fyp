@@ -15,6 +15,78 @@ body {
     opacity: 97%;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header stays on top of other content */
+}
+
+.navbar {
+    display: flex;
+    padding: 20px 50px;
+    align-items: center;
+    background: #2A2A2C;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+    nav ul li {
+        display: inline-block;
+        border: 1px solid #308D46;
+        padding: 7px 22px;
+        margin: 10px 15px;
+        box-shadow: 4px 4px 5.5px #131417;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+a {
+    text-decoration: none;
+    color: #308D46;
+    font-size: 15.5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+nav ul li:hover a {
+    color: #ffffff;
+}
+
+nav ul li:hover {
+    background: #308D46;
+    border: 1px solid #308D46;
+    transform: translate(-6px,-6px);
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.logo img {
+    transition: 0.8s ease-in-out;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+    .logo img:hover {
+        transform: scale(1.12) rotate(360deg);
+    }
+
+
+
 .container {
     max-width: 850px;
     width: 100%;
@@ -57,7 +129,7 @@ form .user-details .input-box {
 }
 
 .user-details .input-box .details {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 500px;
     font-size: 23px;
     margin-bottom: 5px;
@@ -76,9 +148,45 @@ form .user-details .input-box {
     transition: all 0.5s ease;
 }
 
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 7px;
+    padding-left: 25px;
+    font-size: 18px;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+    background-color: whitesmoke; /* Ensure the background is transparent */
+    color: rgb(114, 114, 114); /* Set text color */
+}
+
+.user-details .input-box select {
+    -webkit-appearance: none; /* Remove default arrow on Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow on Firefox */
+    appearance: none; /* Remove default arrow */
+    background-image: url('arrow.png'); /* Add custom arrow image */
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-right: 20px; /* Adjust padding to accommodate arrow */
+}
+
+.user-details .input-box select option {
+    background-color: #2C2C2C; /* Background color */
+    color: white; /* Text color */
+}
+
+.user-details .input-box select option {
+    background-color: #2C2C2C; /* Background color */
+    color: white; /* Text color */
+}
     .user-details .input-box input:focus,
     .user-details .input-box input:valid {
         border-color: orange;
+    }
+    .user-details .input-box select::-ms-expand {
+        display: none; /* Remove default arrow on IE */
     }
 
 form .belt .belt-title {
